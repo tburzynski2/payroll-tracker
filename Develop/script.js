@@ -10,6 +10,11 @@ const collectEmployees = function () {
     let firstName = window.prompt("Enter employee's first name:");
     let lastName = window.prompt("Enter employee's last name:");
     let salary = window.prompt("Enter employee's salary:");
+    while (isNaN(salary)) {
+      salary = window.prompt(
+        "Invalid entry (must be a number.) Enter employee's salary:"
+      );
+    }
     const employee = {
       firstName: firstName,
       lastName: lastName,
